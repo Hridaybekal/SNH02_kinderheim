@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Your Hackathon Dashboard</title>
+</head>
+<body>
+
+    <header>
+        <h1>Your Hackathon Dashboard</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="#" onclick="goToChatbot()">Chatbot</a></li>
+            <li><a href="/cards">Card Slider</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>This is your dashboard. Add your content here.</p>
+            <button id="go-to-chatbot-button" onclick="goToChatbot()">Go to Chatbot</button>
+        </section>
+
+        <section id="chatbot" style="display: none;">
+            <h2>Chatbot</h2>
+            <div id="chat-container">
+                <div id="chat"></div>
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

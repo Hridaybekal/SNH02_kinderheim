@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Update the link to reference the correct CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='cards.css') }}">
+    <title>Questionnaire</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/chatbot">Chatbot</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <h2>Question 1</h2>
+            <p>Are you feeling tired?</p>
+            <div class="options">
+                <button onclick="selectOption('card1', 'yes')">Yes</button>
+                <button onclick="selectOption('card1', 'no')">No</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Question 2</h2>
+            <p>Did you have all your meals?</p>
+            <div class="options">
+                <button onclick="selectOption('card2', 'yes')">Yes</button>
+                <button onclick="selectOption('card2', 'no')">No</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Question 3</h2>
+            <p>Do you feel anxious or sad?</p>
+            <div class="options">
+                <button onclick="selectOption('card3', 'yes')">Yes</button>
+                <button onclick="selectOption('card3', 'no')">No</button>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h2>Question 4</h2>
+            <p>Did your day go well in general?</p>
+            <div class="options">
+                <button onclick="selectOption('card4', 'yes')">Yes</button>
+                <button onclick="selectOption('card4', 'no')">No</button>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <h2>Question 5</h2>
+            <p>Do you feel alone?-----</p>
+            <div class="options">
+                <button onclick="selectOption('card5', 'yes')">Yes</button>
+                <button onclick="selectOption('card5', 'no')">No</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let score = 0;
+
+        function selectOption(cardId, option) {
+            // Display a message for each question
+            showMessage(`Selected option for Question ${cardId.split('card')[1]}: ${option}`);
+            
+            // Increment the score for 'yes' responses
+            if (option === 'yes') {
+                score++;
+            }
+
+            // Check if all questions are answered
+            if (score === 5) {
+                showTotalScore();
+            }
+        }
+
+        function showMessage(message) {
+            alert(message);
+        }
+
+        function showTotalScore() {
+            alert(`Total Score: ${score}\n${getScoreMessage(score)}`);
+        }
+
+        function getScoreMessage(score) {
+            if (score === 5) {
+                return "You're Happy!";
+            } else if (score >= 3) {
+                return 'You could use a boost.';
+            } else {
+                return 'You need to cheer up.';
+            }
+        }
+    </script>
+</body>
+
+</html>

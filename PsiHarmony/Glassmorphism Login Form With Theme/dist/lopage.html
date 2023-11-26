@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+  <section class="container">
+    <div class="login-container">
+      <div class="circle circle-one"></div>
+      <div class="form-container">
+        <img src="./Clipped_image_20231126_012538.png" alt="illustration" class="illustration" />
+        <h1 class="opacity">LOGIN</h1>
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="USERNAME" />
+          <input type="password" id="password" placeholder="PASSWORD" />
+          <button type="button" class="opacity" onclick="login()">SUBMIT</button>
+        </form>
+        <div class="register-forget opacity">
+          <a href="">REGISTER</a>
+          <a href="">FORGOT PASSWORD</a>
+        </div>
+      </div>
+      <div class="circle circle-two"></div>
+    </div>
+    <div class="theme-btn-container"></div>
+  </section>
+
+  <script src="./strn.js"></script>
+  
+
+  <script>
+    function login() {
+      // Get values from the form
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Replace these with your actual credentials
+      var validUsername = "user";
+      var validPassword = "pass";
+
+      // Check if the entered credentials are valid
+      if (username === validUsername && password === validPassword) {
+        // Redirect to the dashboard page (replace "dashboard.html" with your actual page)
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    }
+  </script>
+</body>
+</html>

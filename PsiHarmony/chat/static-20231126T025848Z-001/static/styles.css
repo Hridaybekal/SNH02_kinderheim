@@ -1,0 +1,77 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav {
+    background-color: #eee;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+#dashboard,
+#chatbot {
+    margin-top: 20px;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#chat {
+    flex: 1;
+}
+
+#user-input {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#go-to-chatbot-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+/* Add more styles as needed */

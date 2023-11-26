@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Health Monitor Dashboard</h1>
+    
+    <div class="container">
+        <nav class="horizontal-nav">
+            <ul>
+                <li><a href="#heartRate">Heart Rate</a></li>
+                <li><a href="#steps">Steps</a></li>
+                <li><a href="#sleep">Sleep</a></li>
+                <li><a href="#spo2">SpO2</a></li>
+                <li><a href="#calories">Calories Burnt</a></li>
+                <li><a href="./i.html">Mental Health</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            <img src="./IMG_20231126_000500_213.jpg"  class="img">
+            <section id="dashboard">
+                <div class="board with-nav" id="heartRate">
+                    <h2>Heart Rate</h2>
+                    <canvas id="heartRateChart"></canvas>
+                </div>
+                <div class="board with-nav" id="steps">
+                    <h2>Steps</h2>
+                    <p>Total Steps: <span id="totalSteps">0</span></p>
+                </div>
+                <div class="board with-nav" id="sleep">
+                    <h2>Sleep Data</h2>
+                    <canvas id="sleepChart"></canvas>
+                </div>
+                <div class="board with-nav" id="spo2">
+                    <h2>SpO2 Data</h2>
+                    <canvas id="spo2Chart"></canvas>
+                </div>
+                <div class="board with-nav" id="calories">
+                    <h2>Calories Burnt Today</h2>
+                    <p>Total Calories: <span id="totalCalories">0</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>

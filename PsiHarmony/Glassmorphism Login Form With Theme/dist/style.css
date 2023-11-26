@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Add smooth scrolling behavior to the whole page */
+}
+
+header {
+    background-color: #4CAF50;
+    height: 150px;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-evenly; /* Distribute items evenly in the container */
+    height: 100vh; /* Make sure the container takes the full height of the viewport */
+}
+
+.horizontal-nav {
+    background-color: transparent  ;
+    padding: 1em;
+    height: 75px;
+}
+
+.horizontal-nav ul {
+    list-style-type: none;
+    height: 70px;
+    
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.horizontal-nav li {
+    margin-right: 1em;
+}
+
+.horizontal-nav a {
+    display: block;
+    padding: 0.5em; /* Adjusted padding for smaller buttons */
+    color: white;
+    text-decoration: none;
+}
+
+.horizontal-nav a:hover {
+    background-color: #555;
+}
+
+.board {
+    display: flex;
+    flex-direction: column; /* Stack items vertically within each board */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    border: 1px solid #ddd;
+    padding: 1em; /* Adjusted padding for boards */
+    margin: 1em;
+    width: 45%; /* Adjusted width for 2-per-row layout */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+.board.with-nav {
+    margin-left: 0; /* Remove left margin for boards with navigation */
+    justify-items: center;
+    margin: auto;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em; /* Add margin at the bottom for separation */
+}
+
+.board p {
+    margin: 0; /* Remove default margin for paragraphs */
+}
+
+/* Optionally, you can add a class for the spans to avoid affecting other spans on the page */
+.board span {
+    display: block; /* Make spans behave like block elements */
+    margin-top: 0.5em; /* Adjusted top margin for spacing between counts and heading */
+}
+
+.img{
+    position: absolute;
+    display: grid;
+    place-items: left;
+    height: 400px;
+}
